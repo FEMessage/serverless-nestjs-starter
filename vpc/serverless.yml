@@ -1,0 +1,10 @@
+stage: ${env:STAGE}
+
+component: vpc # (required) name of the component. In that case, it's vpc.
+name: serverless-vpc # (required) name of your vpc component instance.
+
+inputs:
+  region: ap-guangzhou  # 可选 ap-guangzhou, ap-shanghai, ap-beijing
+  zone: ap-guangzhou-2  # 可选 ap-guangzhou-2, ap-shanghai-2, ap-beijing-3
+  vpcName: ${name}
+  subnetName: ${name}

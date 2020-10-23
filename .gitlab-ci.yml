@@ -1,0 +1,45 @@
+# This file is a template, and might need editing before it works on your project.
+# Official framework image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/node/tags/
+default:
+  image: node:lts
+  before_script: 
+    - npm install -g serverless
+    
+cache: 
+  paths:
+    - api/node_modules/
+
+variables:
+  SERVERLESS_PLATFORM_VENDOR: tencent
+  GLOBAL_ACCELERATOR_NA: 'true'
+
+job_dev:
+  only:
+    - dev
+  variables: 
+    STAGE: dev
+  script:
+    - cd api
+    - yarn --frozen-lockfile --production
+    - yarn build
+    - cd ..
+    - sls deploy 
+
+job_prod:
+  only:
+    - master
+  variables: 
+    STAGE: prod
+  script:
+    - cd api
+    - yarn --frozen-lockfile --production
+    - yarn build
+    - cd ..
+    - sls deploy
+
+
+
+    
+
+

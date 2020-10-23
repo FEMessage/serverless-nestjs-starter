@@ -1,0 +1,19 @@
+name: serverless-nestjs-starter
+displayName: nestjs + postgres 后端应用
+author: FEMessage
+org: FEMessage
+type: template
+description: Using serverless + nestjs + postgres to build a backend app
+description-i18n:
+  zh-cn: 使用 serverless + nestjs + postgres 研发一个后端应用，可直接部署到腾讯云
+keywords: 'tencent, serverless, nestjs, postgres'
+repo: 'https://github.com/FEMessage/serverless-nestjs-starter'
+readme: 'https://github.com/FEMessage/serverless-nestjs-starter/blob/main/README.md'
+license: MIT
+src:
+  src: ./
+  exclude:
+    - .env
+    - '**/node_modules'
+    - '**/package-lock.json'
+app: serverless-nestjs-starter

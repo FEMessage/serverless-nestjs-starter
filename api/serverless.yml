@@ -1,0 +1,24 @@
+stage: ${env:STAGE}
+
+component: nestjs
+name: serverless-api
+inputs:
+  src: ./
+  exclude: 
+  - 'node_modules/**'
+  region: ap-guangzhou
+  runtime: Nodejs10.15
+  functionConf:
+    timeout: 30
+    vpcConfig:
+      vpcId: ${output:${stage}:${app}:serverless-vpc.vpcId}
+      subnetId: ${output:${stage}:${app}:serverless-vpc.subnetId}
+    environment:
+      variables:
+        PG_CONNECT_STRING: ${output:${stage}:${app}:serverless-db.private.connectionString}
+  apigatewayConf:
+    enableCORS: true
+    protocols:
+      - http
+      - https
+    environment: release
