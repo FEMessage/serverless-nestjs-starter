@@ -6,6 +6,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Install](#install)
 - [Dev](#dev)
 - [Deploy](#deploy)
 - [Links](#links)
@@ -16,7 +17,14 @@
 
 Using [serverless](http://serverless.com/) + [nestjs](https://docs.nestjs.com/) + [postgres](https://www.postgresql.org/docs/10/) to build a backend app.
 
-[⬆ Back to Top](#table-of-contents)
+## Install
+
+```sh
+sls create --template-url https://github.com/FEMessage/serverless-nestjs-starter.git 
+
+# or
+sls create --template-url https://github.com/FEMessage/serverless-nestjs-starter.git --path my-serverless-project
+```
 
 ## Dev
 
