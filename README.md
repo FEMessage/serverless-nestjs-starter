@@ -1,21 +1,16 @@
 # serverless-nestjs-starter
 
-[![NPM License](https://badgen.net/npm/license/@femessage/serverless-nestjs-starter)](https://github.com/FEMessage/serverless-nestjs-starter/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FEMessage/serverless-nestjs-starter/pulls)
+Using [serverless](http://serverless.com/) + [nestjs](https://docs.nestjs.com/) + [postgres](https://www.postgresql.org/docs/10/) to build a backend app.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
 - [Install](#install)
 - [Dev](#dev)
 - [Deploy](#deploy)
 - [Links](#links)
 - [Contributors](#contributors)
 - [License](#license)
-
-## Introduction
-
-Using [serverless](http://serverless.com/) + [nestjs](https://docs.nestjs.com/) + [postgres](https://www.postgresql.org/docs/10/) to build a backend app.
 
 ## Install
 
